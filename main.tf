@@ -4,9 +4,7 @@ terraform {
   }
 }
 
-provider "fakewebservices" {
-  token = var.provider_token
-}
+
 
 resource "fakewebservices_vpc" "primary_vpc" {
   name = "Primary VPC"
@@ -14,7 +12,7 @@ resource "fakewebservices_vpc" "primary_vpc" {
 }
 
 resource "fakewebservices_server" "servers" {
-  count = 2
+  count = var.count
 
   name = "Server ${count.index+1}"
   type = "t2.micro"

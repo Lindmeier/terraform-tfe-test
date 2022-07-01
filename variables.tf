@@ -1,3 +1,3 @@
-variable "provider_token"{
-    type = string
+variable "count"{
+    type = number
 }
