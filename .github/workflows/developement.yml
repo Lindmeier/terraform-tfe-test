@@ -64,3 +64,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         # GitHub repository path. Example) azu/test
         github_repo: ${{ github.repository }}
+        git_commit_sha: ${{ github.sha }}
