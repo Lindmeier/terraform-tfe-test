@@ -21,7 +21,7 @@ jobs:
     - uses: hashicorp/setup-terraform@v2
     - uses: actions/checkout@v3
       with:
-        ref: develop
+        ref: ${{ github.event.pull_request.head.ref }}
 
     - name: Terraform fmt
       id: fmt
@@ -48,9 +48,19 @@ jobs:
     - name: Git Version
       # You may pin to the exact commit or the version.
       # uses: codacy/git-version@fa06788276d7492a2af01662649696d249ecf4cb
+      id: git-version
       uses: codacy/git-version@2.4.0
       with:
         # The name of the release branch
         release-branch: master
         # The name of the dev branch
         dev-branch: develop
+    - name: Git Tag
+      uses: pkgdeps/git-tag-action@v2.0.1
+      with:
+        # Git Tag version
+        version: ${{ steps.git-version.outputs.version.value }}
+        # use secrets.GITHUB_TOKEN
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        # GitHub repository path. Example) azu/test
+        github_repo: ${{ github.repository }}
