@@ -59,7 +59,7 @@ jobs:
       uses: pkgdeps/git-tag-action@v2.0.1
       with:
         # Git Tag version
-        version: ${{ steps.git-version.outputs.version.value }}
+        version: ${{ steps.git-version.outputs.version }}
         # use secrets.GITHUB_TOKEN
         github_token: ${{ secrets.GITHUB_TOKEN }}
         # GitHub repository path. Example) azu/test
