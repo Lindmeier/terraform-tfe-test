@@ -11,7 +11,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_fakewebservices"></a> [fakewebservices](#provider\_fakewebservices) | ~> 0.1 |
+| <a name="provider_fakewebservices"></a> [fakewebservices](#provider\_fakewebservices) | 0.2.3 |
 
 ## Modules
 

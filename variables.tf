@@ -1,3 +1,3 @@
-variable "anzahl"{
-    type = number
+variable "anzahl" {
+  type = number
 }
