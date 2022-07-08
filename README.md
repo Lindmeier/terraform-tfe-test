@@ -31,6 +31,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_anzahl"></a> [anzahl](#input\_anzahl) | n/a | `number` | n/a | yes |
+| <a name="input_anzahl1"></a> [anzahl1](#input\_anzahl1) | n/a | `number` | n/a | yes |
 
 ## Outputs
 
